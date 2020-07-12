@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function select(){
+				//0.获取用户数据
+				var $uid=uid.value;
+				//1.创建异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接收响应，创建监听
+				xhr.onreadystatechange=function (){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						var arr=JSON.parse(r);
+						var strHtml=`
+						<table border="1">
+						<tr>
+							<th>用户编号</th>
+							<th>用户名</th>
+							<th>用户邮箱</th>
+							<th>用户手机号</th>
+							<th>用户姓名</th>
+							<th>性别</th>
+							<th>操作</th>
+						<tr>	
+						`;
+						//结构字符串--2
+						for(var i=0;i<arr.length;i++){
+							var sex="保密";
+							if(arr[i].gender==1){
+								sex="男";
+							}else if(arr[i].gender==0){
+								sex="女";
+							}else{
+								sex="保密";
+							}
+							strHtml+=`
+							<tr>
+								<td>${arr[i].uid}</td>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].email}</td>
+								<td>${arr[i].phone}</td>
+								<td>${arr[i].user_name}</td>
+								<td>${sex}</td>
+								<td>
+									<a href="#">修改</a>
+									<a href="#">删除</a>
+								</td>	
+							</tr>
+							`;
+						}
+						strHtml+=`</table>`;
+						d1.innerHTML=strHtml;	
+					}
+				}
+				//2.创建请求，打开连接
+				xhr.open("get","/pro/v1/search/"+$uid,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uid"><br>
+		<button onclick="select()">查询</button>
+		<div id="d1"></div>
+	</body>
+</html>

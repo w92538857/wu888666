@@ -1,0 +1,19 @@
+#初始化
+git config --global user.name "你的姓名" # 设置你的用户姓名
+git config --global user.email "你的邮箱地址" # 设置你的邮箱地址
+git config --list #查看配置信息列表
+q #结束查看列表
+clear #清空当前黑窗口
+
+#git仓库的操作
+git init #把项目文件夹变成git的操作空间
+git status #查询操作的空间的状态
+git add 01.html #把01.html添加到暂存区
+git add . #把所有文件，都添加进暂存区
+git commit -m 此版本的提交说明 #把暂存区的文件存储本地仓库
+
+git log #查看当前版本，以及当前版本之前的所有版本
+git reflog #查看所有的版本及恢复记录
+
+git checkout 文件名称 #从暂存区获取上一次记录，回到操作空间
+git reset --hard id #从仓库获取任意一次记录，回到操作空间

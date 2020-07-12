@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function login(){
+				var $uname=uname.value;
+				var $upwd=upwd.value;
+				//1.创建异步对象xhr
+				var xhr=new XMLHttpRequest();
+				//4.创建监听，接收响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							d1.innerHTML="登录成功";
+						}else{
+							d1.innerHTML="登录失败";
+						}
+					}
+				}
+				//2.打开连接，创建请求
+				xhr.open("post","/ajax/post_login",true);
+				//3.发送请求
+				//3.1 post和put需要请求主体传递参数
+				//默认请求头信息，要求只能传递普通文本  ，=  &  传不过去
+				//需要我们更改请求头信息，改成全部文本
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				var formdata=`uname=${$uname}&upwd=${$upwd}`;
+				xhr.send(formdata);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="login()">登录</button>
+		<div id="d1"></div>
+	</body>
+</html>

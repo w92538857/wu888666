@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function login(){
+				var $uname=uname.value;
+				var $upwd=upwd.value;
+				if(!$uname){alert("用户名不能为空");return;}
+				if(!$upwd){alert("密码不能为空");return;}
+				//1.创建异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接收响应，创建监听
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							d1.innerHTML="登录成功";
+						}else{
+							d1.innerHTML="登录失败";
+						}
+					}
+				}
+				//2.创建请求，打开连接
+				xhr.open("post","/ajax/post_login",true);
+				//3.发送请求
+				//3.1创建请求主体，有参数		${}插值操作
+				//默认情况下，允许提交普通字符，普通字符不能有特殊符号
+				var formdata=`uname=${$uname}&upwd=${$upwd}`;
+				//要修改请求头信息，允许提交所有字符
+				xhr.setRequestHeader("Content-Type","application/x-www-form-urlencoded");
+				xhr.send(formdata);
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="login()">登录</button>
+		<div id="d1"></div>
+	</body>
+</html>

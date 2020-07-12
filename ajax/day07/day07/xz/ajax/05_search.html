@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function search(){
+				var $uid=uid.value;
+				if(!$uid){
+					alert("uid不能为空");return;
+				}
+				//1.创建xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.创建监听，接收响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==0){
+							alert("查询失败");
+						}else{
+							//r保存着json字符串
+							//json解析成obj类型
+							var arr=JSON.parse(r);
+							console.log(arr);
+							uname.value=arr[0].uname;
+							email.value=arr[0].email;
+							phone.value=arr[0].phone;
+						}
+					}
+				}
+				//2.打开连接，创建请求
+				xhr.open("get","/ajax/search/"+$uid,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uid"><br>
+		<button onclick="search()">查询</button>
+		<input type="text" id="uname"><br>
+		<input type="text" id="email"><br>
+		<input type="text" id="phone"><br>
+	</body>
+</html>

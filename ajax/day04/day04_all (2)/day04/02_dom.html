@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				// 2.获取input对象
+				//在当前的html文档中，通过元素id来获取元素对象
+				var inp=document.getElementById("n1");
+				//3.使用对象.出属性
+				//3.1获取input的值
+				var str=inp.value;
+				console.log(str);
+				console.log(inp.value);
+				//3.2修改input的值
+				inp.value="abcd";
+			}
+			function show1(){
+				// 通过id获取双标签的对象
+				var obj=document.getElementById("d1");
+				//通过innerHTML属性，操作双标签的内容区域
+				//3.2获取内容区域的值
+				var str=obj.innerHTML;
+				console.log(str);
+				//3.1修改内容去的值
+				obj.innerHTML="内容区域";
+			}
+		</script>
+	</head>
+	<body>
+		<div id="d1">ddddddd</div>
+		<button onclick="show1()">显示</button>
+		<br>
+		<hr>
+		<br>
+		<input id="n1" type="text">
+		<!-- 1.编写事件 -->
+		<button onclick="show()">显示</button>
+	</body>
+</html>

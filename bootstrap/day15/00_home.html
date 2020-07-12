@@ -1,0 +1,56 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			.my_bg{
+				background:linear-gradient(to right,#1a0b37,#55294a);
+			}
+			.h1{font-size: 60px;}
+			#footer{
+				display: flex;
+				flex-wrap: wrap;
+			}
+			@media (min-width:576px) {
+				#footer>img{width: 100%;}
+				.my_fontsize{font-size: 16px;}
+			}
+			@media (min-width:768px) {
+				#footer>img{width: 50%;}
+				.my_fontsize{font-size: 24px;}
+			}
+			@media (min-width:992px) {
+				#footer>img{width: 25%;}
+				.my_fontsize{font-size: 30px;}
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<ul class="list-unstyled bg-dark clearfix p-2 mb-0">
+				<li class="float-left mx-2"><a class="text-white" href="">Boot中文网</a></li>
+				<li class="float-left mx-2"><a class="text-white" href="">起步</a></li>
+				<li class="float-left mx-2"><a class="text-white" href="">全局css</a></li>
+				<li class="float-left mx-2"><a class="text-white" href="">组件</a></li>
+				<li class="float-left mx-2"><a class="text-white" href="">插件</a></li>
+			</ul>
+			<div class="my_bg text-center py-5">
+				<div class="h1 text-white ">Bootstrap</div>
+				<div class="my_fontsize text-white">简洁、直观、强悍的前端开发框架，让web开发更迅速、简单。</div>
+				<a class="btn btn-primary my-3" href="#">Bootstrap3中文文档(v3.3.7)</a><br>
+				<a class="text-white" href="#">Bootstrap2中文文档(v2.3.2)</a>
+			</div>
+			<div id="footer">
+				<img src="boot-1.png" alt="">
+				<img src="boot-2.png" alt="">
+				<img src="boot-3.png" alt="">
+				<img src="boot-4.png" alt="">
+			</div>
+		</div>
+	</body>
+</html>

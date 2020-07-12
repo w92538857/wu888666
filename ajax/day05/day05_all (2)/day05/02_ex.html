@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show_uname(){
+				uname_msg.innerHTML="用户名长度6~10";
+			}
+			function show_upwd(){
+				upwd_msg.innerHTML="密码长度8~12";
+			}
+			function show_cpwd(){
+				cpwd_msg.innerHTML="请在输入一次密码";
+			}
+			//失去焦点
+			function check_uname(){
+				var $uname=uname.value;
+				if(!$uname){
+					uname_msg.innerHTML="用户名不能为空";
+				}else if($uname.length<6 || $uname.length>10){
+					uname_msg.innerHTML="格式错误";
+				}else{
+					uname_msg.innerHTML="√";
+				}
+			}
+			function check_upwd(){
+				var $upwd=upwd.value;
+				if(!$upwd){
+					upwd_msg.innerHTML="密码不能为空";
+				}else if($upwd.length<8 || $upwd.length>12){
+					upwd_msg.innerHTML="格式错误";
+				}else{
+					upwd_msg.innerHTML="√";
+				}
+			}
+			function check_cpwd(){
+				if(cpwd.value==upwd.value){
+					cpwd_msg.innerHTML="√";
+				}else{
+					cpwd_msg.innerHTML="两次输入不一致";
+				}
+			}
+			function login(){
+				if(uname_msg.innerHTML=="√"&&upwd_msg.innerHTML=="√"&&cpwd_msg.innerHTML=="√"){
+					alert("登录成功");
+				}else{
+					alert("信息有误");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input onblur="check_uname()" onfocus="show_uname()" type="text" id="uname">
+		<span id="uname_msg"></span><br>
+		<input onblur="check_upwd()" onfocus="show_upwd()"  type="text" id="upwd">
+		<span id="upwd_msg"></span><br>
+		<input onblur="check_cpwd()" onfocus="show_cpwd()" type="text" id="cpwd">
+		<span id="cpwd_msg"></span><br>
+		<button onclick="login()">登录</button>
+	</body>
+</html>

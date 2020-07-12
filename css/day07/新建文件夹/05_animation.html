@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="animate.css"/>
+		<style>
+			/* 定义动画 */
+			@-webkit-keyframes change{
+				0%{border-radius: 0%;background-color: #f00;}
+				25%{border-radius: 50%;background-color: #f00;}
+				50%{border-radius: 0%;background-color: #0ff;}
+				75%{border-radius: 50%;background-color: #f0f;}
+				100%{border-radius: 0%;background-color: #00f;}
+			}
+			#d1{
+				width: 200px;height: 200px;
+				/* background-color: #0000CC; */
+				/* 调用动画的名称 */
+			/* 	animation-name: zoomInUp; */
+				/* 动画持续时长 */
+				/* animation-duration: 5s; */
+				/* 时间曲线函数 */
+				/* animation-timing-function: linear; */
+				/* 动画的延迟时间 */
+				/* animation-delay:1s; */
+				/* 动画的播放次数 */
+				/* animation-iteration-count: infinite; */
+				/* 动画的播放顺序 */
+				/* animation-direction: alternate; */
+				animation: change 3s ease 1s infinite alternate;
+				/* 动画的填充状态 */
+				animation-fill-mode: forward;
+			}
+			#d1:hover{
+			/* 	animation: change 3s ease 1s infinite alternate; */
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+	</body>
+</html>

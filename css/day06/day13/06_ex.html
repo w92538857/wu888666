@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#content{
+				width: 1000px;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+			}
+			#content>div{background-color: #e8e8e8;}
+			.top_height{height: 377px;}
+			.bottom_height{height:233px;}
+			#content>div:first-child{flex:0 0 60.9%;}
+			#content>div:nth-child(2){flex:0 0 38.1%;}
+			#content>div:nth-child(3){flex:0 0 37.7%;margin-top: 10px;}
+			#content>div:nth-child(4),#content>div:nth-child(5),#content>div:nth-child(6){flex:0 0 19.8%;margin-top: 10px;}
+			
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<div class="top_height"></div>
+			<div class="top_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+			<div class="bottom_height"></div>
+		</div>
+	</body>
+</html>

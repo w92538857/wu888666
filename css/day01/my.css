@@ -1,0 +1,17 @@
+h5{
+	color: darkcyan;
+	background-color: skyblue;
+	font-size: 12px;
+}
+h3{
+	background-color: red;
+	color: pink;
+}
+h2{
+	font-size: 36px;
+	background-color: blueviolet !important;
+}
+p{
+	color: red;
+	font-size: 40px;
+}

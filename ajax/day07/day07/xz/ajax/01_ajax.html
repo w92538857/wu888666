@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function show(){
+				//1.创建异步对象--xhr小黄人
+				var xhr=new XMLHttpRequest();
+				//4.接收响应
+				xhr.onreadystatechange=function(){
+					//xhr.readyState==4  代表xhr的状态是接收全部响应完毕
+					//xhr.status==200  响应状态码为200  ok
+					if(xhr.readyState==4 && xhr.status==200){
+						//从xhr.responseText中拿出响应字符串
+						var r=xhr.responseText;
+						console.log(r);
+					}
+				}
+				//2.创建请求,打开连接
+				xhr.open("get","http://127.0.0.1:8080/ajax/test",true);
+				//3.发送请求
+				//没有请求主体，使用null或者不填
+				xhr.send();//参数是请求主体formdata
+				
+				
+				
+				
+			}
+		</script>
+	</head>
+	<body>
+		<button onclick="show()">发送请求</button>
+	</body>
+</html>

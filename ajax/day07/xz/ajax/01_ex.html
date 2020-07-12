@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//1.创建xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.创建监听，接收响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						d1.innerHTML=r;
+					}
+				}
+				//2.创建请求，打开连接(页面和接口属于同一个服务器，可以使用相对路径)
+				xhr.open("get",`/ajax/ex?uname=${uname.value}&upwd=${upwd.value}`,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="show()">ajax</button>
+		<h2 id="d1"></h2>
+	</body>
+</html>

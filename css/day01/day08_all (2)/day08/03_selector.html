@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{color:red;}
+			div{background-color: yellow}
+			#d1{
+				color:orange;
+				background-color: #069;
+			}
+			.text-red{color:aqua;}
+			.bg-yellow{background-color: yellow;}
+			.font-36{font-size:36px;}
+			.bg-yellow.font-36{font-style: italic;}
+			p.bg-yellow{background-color: grey;}
+			div span{background-color: blue;}
+			div p>span{background-color:pink}
+		</style>
+	</head>
+	<body>
+		<h4>后代选择器</h4>
+		<div>
+			<span>我是div中span</span>
+			<p>
+				我是div中的p
+				<span>我是div中的p中span</span>
+			</p>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<h4 class="bg-yellow font-36 ">类选择器</h4>
+		<p class="text-red bg-yellow ">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quas a id vero autem hic minima quod placeat nostrum tempore incidunt iure fugit aperiam odit perspiciatis veritatis dolores totam. Adipisci incidunt.</p>
+		<br>
+		<hr>
+		<br>
+		<h4>id选择器</h4>
+		<div id="d1">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus facere quos aliquam expedita eveniet laborum nemo odit deserunt porro distinctio. Doloremque dolorem ea quisquam minus sunt aspernatur delectus deserunt totam!</div>
+		<div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus facere quos aliquam expedita eveniet laborum nemo odit deserunt porro distinctio. Doloremque dolorem ea quisquam minus sunt aspernatur delectus deserunt totam!</div>
+	</body>
+</html>

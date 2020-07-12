@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			table{
+				width: 200px;height: 200px;
+				border: 2px solid #008000;
+				table-layout:fixed;
+				border-collapse: collapse;
+			}
+			td{
+				border: 1px solid #008B8B;
+			}
+			/* tr:first-child{background-color: #0ff;}
+			tr:last-child{background-color: #ff0;} */
+			tr:not(:nth-child(3)),td:not(:nth-child(2)){background-color: #0000FF;}
+			div:empty{width: 100px;height: 100px;background-color: #ff0;}
+			/* a:only-child{color: #f00;} */
+			a:not(:only-child){color:red;}
+			ul{
+				width: 200px;
+				list-style: none;
+			}
+			ul li{
+				border: 2px solid #f00;
+				border-radius: 4px;
+			}
+			li:not(:last-child){
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			li:not(:first-child){
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+			/* li+li{} */
+			/* li:first-child{
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+			li:last-child{
+				border-bottom-left-radius:4px;
+				border-bottom-right-radius:4px;
+			} */
+			
+			#d2::first-letter{
+				color: #f00;font-size: 50px;
+			}
+			#d2::first-line{
+				color: #00f;
+			}
+			#d2::selection{
+				color: yellow;
+				background-color: #AAFFAA;
+				/* 只能写颜色和背景 */
+				font-size: 60px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus quibusdam eum distinctio nisi dolorem tenetur doloremque debitis esse facere quasi impedit fugiat explicabo. Nihil ab fugit laborum illum illo molestiae nesciunt voluptate alias mollitia esse consequatur reiciendis repudiandae deleniti temporibus minus quidem impedit ipsa error tempore nostrum nisi similique natus praesentium voluptas veniam sunt sit explicabo? Quis excepturi perspiciatis amet minus ratione corrupti eveniet commodi aliquid. Dolor laboriosam quidem. Unde corporis ex fugiat veritatis quae perspiciatis sed error id repellat vel. Nobis temporibus doloremque delectus mollitia tenetur iusto aperiam architecto amet molestiae vero excepturi unde aspernatur sint animi qui nihil voluptate fuga dolorem neque quaerat! Aut accusantium nisi itaque nulla quibusdam necessitatibus reprehenderit harum maiores quidem illo alias voluptatem quisquam impedit hic est voluptatibus aperiam voluptates saepe odio quia suscipit possimus deserunt neque asperiores autem ea rem. Deserunt dolores magni ipsa laudantium unde quaerat aliquam reiciendis saepe dolorem non assumenda ducimus nulla repudiandae rem maxime fugit possimus alias ut voluptate quam dignissimos minus cum accusantium temporibus quasi at tempora repellendus inventore quia eius! Nostrum rem consequuntur debitis est quaerat animi natus. Modi repudiandae nostrum optio aperiam necessitatibus cupiditate quod sequi fuga eius illum autem nisi velit quia nobis id natus!</div>
+		<ul>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+		<div>
+			<a href="#">123</a>
+			<a href="#">456</a>
+			<a href="#">123</a>
+			<a href="#">456</a>
+			<a href="#">123</a>
+			<a href="#">456</a>
+		</div>
+		<div>
+			<a href="#">456</a>
+		</div>
+		<div></div>
+		<br>
+		<hr>
+		<br>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+	</body>
+</html>

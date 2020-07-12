@@ -1,0 +1,212 @@
+//颜色的运算
+div{
+	background-color: #f5f222+#054f54;
+}
+div{
+	background:#ff2233+#016677;
+	color:rgba(11,22,33,0.5)+rgba(22,33,44,0.5);
+	color: rgba(11,22,12,0.6)+rgba(22,44,48,0.6);
+}
+
+//插值
+p{
+	content: "jintianchil #{50+80} base";
+}
+p{
+	content: "liangliang ate #{50+60} baose";
+}
+
+p{
+	content:"liangliang ate #{50+60}  baozis";
+}
+
+
+//除法
+p{
+	font:10px/5px;
+	$my_width:1000px;
+	width:$my-width/2;
+	height: (500px/2);
+	margin: 5px-8px/2;
+}
+
+//减法
+$my-width:100px;
+div{
+	width: $my-width - 55px;
+}
+
+
+$my-width:100px;
+div{
+	width: $my-width - 65px;
+}
+
+
+//加法
+div{
+	content: "你好"+明天;
+	content: 明天+"加油";
+}
+
+div{
+	content: "何鹏飞"+别委屈;
+	content: 不是不报+"时候未到";
+}
+
+
+
+//继承----骗子
+.parent{
+	width: 100px;height: 100px;
+	background-color: #000000;
+	border: 2px solid #F1B0B7;
+}
+.child{
+	margin: 4px;padding: 4px;
+	@extend .parent;
+}
+
+
+//混合器
+//css hack  -webkit- -o- -moz- -ms-
+@mixin my_bg($d,$c1,$c2) {
+	background:-webkit-linear-gradient($d1,$c1,$c2);
+	background:-o-linear-gradient($d1,$c1,$c2);
+	background:-moz-linear-gradient($d1,$c1,$c2);
+	background:-ms-linear-gradient($d1,$c1,$c2);
+}
+
+@mixin my_bg($d,$c1,$c2) {
+	background:-webkit-linear-gradient($d,$c1,$c2);
+	background:-o-linear-gradient($d,$c1,$c2);
+	background:-moz-linear-gradient($d,$c1,$c2);
+	background:-ms-linear-gradient($d,$c1,$c2);
+}
+div{
+	@include my_bg(top,#000,#fff);
+}
+p{
+	@include my_bg(bottom,#f00,#00f);
+}
+@mixin my_border {
+	border:2px solid #f00;
+	border-radius: 2px;
+	outline: 0;
+	box-shadow: 1px 1px 1px 1px #00f;
+}
+#content{
+	@include my_border;
+}
+.container{
+	width:100%;background-color: #004085;
+	@include my_border;
+}
+
+//导入
+@import "2.scss";
+@import "11";
+div{
+	width: $my_width;
+	height: $my_height;
+}
+
+
+//练习，学子商城1L按钮
+// $my_bg:linear-gradient(to bottom;#27b1f6,#0aa1ed);
+// $font-color:#fff;
+// $my_height:40px;
+// .mybtn{
+// 	width: 140px;
+// 	height:$my_height;
+// 	background:$my_bg;
+// 	border-radius: 2px;
+// 	color: $font-color;
+// 	text-align: center;
+// 	line-height: $my_height;
+// 	text-decoration: none;
+// }
+
+
+$my_bg:linear-gradient(to bottom,#27b1f6,#0aa1ed);
+$font-color:#fff;
+$my_heigth:40px;
+.mybtn{
+	display:inline-block;
+	width: 150px;
+	height: $my_heigth;
+	background: $my_bg;
+	color: #fff;
+	border-radius:5px;
+	text-align: center;
+	line-height: $my_heigth;
+	text-decoration: none;
+}
+
+
+
+
+//嵌套
+div{
+	border: {style:solid;color:#f00;width: 10px;};
+}
+
+div{
+	border:{style:solid;color:#f00;width: 10px;}
+}
+
+div{
+	border:{style:solid;color:#f00;width:10px};
+}
+
+#content,.nav,div{
+	a{color:red;}
+}
+
+
+.btn{
+	color:#000000;
+	&:hover{color:#fff;}
+}
+
+
+
+#content{
+	color:#111;
+	div{
+		color:#222;
+		p{
+			color:#333;
+			span{color:#444;}
+		}
+	}
+	h2{
+		color:#555;
+		h3{color:#666;
+			b{color:#777;}
+		}
+	}
+}
+
+
+
+
+
+// 变量
+$jd_red:#f33;
+$jd-width:100px;
+$b-solid:dashed;
+$my_border:$jd-width $b-solid $jd_red;
+$my_str:"薛渣萌呆";
+div{
+	$my-size:12px;
+	content:$my_str;
+	background-color: $jd_red;
+	border:$my_border;
+	width: $jd-width;
+	height: $my-size;
+}
+p{
+	// width:$my-size ;
+}
+

@@ -1,0 +1,137 @@
+@charset "UTF-8";
+div {
+  background-color: #faff76; }
+
+div {
+  background: #ff88aa;
+  color: rgba(33, 55, 77, 0.5);
+  color: rgba(33, 66, 60, 0.6); }
+
+p {
+  content: "jintianchil 130 base"; }
+
+p {
+  content: "liangliang ate 110 baose"; }
+
+p {
+  content: "liangliang ate 110  baozis"; }
+
+p {
+  font: 10px/5px;
+  width: 500px;
+  height: 250px;
+  margin: 1px; }
+
+div {
+  width: 45px; }
+
+div {
+  width: 35px; }
+
+div {
+  content: "你好明天";
+  content: 明天加油; }
+
+div {
+  content: "何鹏飞别委屈";
+  content: 不是不报时候未到; }
+
+.parent, .child {
+  width: 100px;
+  height: 100px;
+  background-color: #000000;
+  border: 2px solid #F1B0B7; }
+
+.child {
+  margin: 4px;
+  padding: 4px; }
+
+div {
+  background: -webkit-linear-gradient(top, #000, #fff);
+  background: -o-linear-gradient(top, #000, #fff);
+  background: -moz-linear-gradient(top, #000, #fff);
+  background: -ms-linear-gradient(top, #000, #fff); }
+
+p {
+  background: -webkit-linear-gradient(bottom, #f00, #00f);
+  background: -o-linear-gradient(bottom, #f00, #00f);
+  background: -moz-linear-gradient(bottom, #f00, #00f);
+  background: -ms-linear-gradient(bottom, #f00, #00f); }
+
+#content {
+  border: 2px solid #f00;
+  border-radius: 2px;
+  outline: 0;
+  box-shadow: 1px 1px 1px 1px #00f; }
+
+.container {
+  width: 100%;
+  background-color: #004085;
+  border: 2px solid #f00;
+  border-radius: 2px;
+  outline: 0;
+  box-shadow: 1px 1px 1px 1px #00f; }
+
+p {
+  color: #f44;
+  width: 321px; }
+
+div {
+  width: 321px;
+  height: 123px; }
+
+.mybtn {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  background: linear-gradient(to bottom, #27b1f6, #0aa1ed);
+  color: #fff;
+  border-radius: 5px;
+  text-align: center;
+  line-height: 40px;
+  text-decoration: none; }
+
+div {
+  border-style: solid;
+  border-color: #f00;
+  border-width: 10px; }
+
+div {
+  border-style: solid;
+  border-color: #f00;
+  border-width: 10px; }
+
+div {
+  border-style: solid;
+  border-color: #f00;
+  border-width: 10px; }
+
+#content a, .nav a, div a {
+  color: red; }
+
+.btn {
+  color: #000000; }
+  .btn:hover {
+    color: #fff; }
+
+#content {
+  color: #111; }
+  #content div {
+    color: #222; }
+    #content div p {
+      color: #333; }
+      #content div p span {
+        color: #444; }
+  #content h2 {
+    color: #555; }
+    #content h2 h3 {
+      color: #666; }
+      #content h2 h3 b {
+        color: #777; }
+
+div {
+  content: "薛渣萌呆";
+  background-color: #f33;
+  border: 100px dashed #f33;
+  width: 100px;
+  height: 12px; }

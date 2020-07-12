@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;list-style: none;}
+			body{
+				font:12px "simhei", Arial, Helvetica, sans-serif;
+			}
+			/* 主体部分 */
+			#main{
+				width: 1000px;height: 632px;
+				/* background-color: #008000; */
+				/* border: 1px solid yellow; */
+				margin: 0 auto;
+			}
+			#content-bd1{
+				width: 611px;height: 376px;
+				background-color: #e8e8e8;
+				border-radius: 3px;
+				float: left;
+				position: relative;
+				margin-right: 10px;
+			}
+			#content-bd2{
+				width: 379px;height: 376px;
+				background-color: #e8e8e8;
+				border-radius: 3px;
+				float:left;
+				position: relative;
+			}
+			#content-bd3{
+				width: 366px;height: 233px;
+				background-color: #e8e8e8;
+				border-radius: 3px;
+				float: left;
+				margin-top: 10px;
+			}
+			#content-bd4{
+				width: 198px;height: 233px;
+				background-color: #e8e8e8;
+				border-radius: 3px;
+				float: right;
+				margin-top: 10px;
+				margin-left: 10px;
+				/* padding: 2px;
+				box-sizing: border-box; */
+			}
+			.desc{
+				width: 245px;height: 243px;
+				position: absolute;
+				top: 55px;left: 65px;
+			}
+			.desc>.title{
+				font: 32px simhei;
+				color:#333333;
+			}
+			.desc>.details{
+				font-size: 12px;
+				color: #666;
+				margin-bottom: 24px;
+			}
+			.desc>.price{
+				font: 24px simhei;
+				color: #0AA1ED;
+				margin-bottom: 12px;
+			}		
+			.desc>.view{
+				width: 130px;height: 40px;
+				display:block;
+				border-radius: 4px;
+				outline: 0;border: 0;
+				background-image: linear-gradient(to bottom,#27b1f6,#0aa1ed);
+				color: #fff;
+				font:16px simhei;
+				line-height: 40px;
+				text-align: center;
+				text-decoration: none;
+			}
+			#content-bd1 img{
+				position: absolute;
+				right: 30px;top: 56px;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+			#content-bd1 img:hover{
+				transform: scale(1.2);/*缩放*/
+			}
+			#content-bd2 img{
+				position: absolute;
+				right: 25px;top: 110px;
+				cursor: pointer;
+				transition: all 0.3s;
+			}
+			#content-bd2 img:hover{
+				transform: scale(1.2);/*缩放*/
+			}
+			#content-bd3-top{
+				width: 366px;
+				height: 35px;
+				background-color: #0aa1ed;
+				position: relative;
+			}
+			#content-bd3-body{
+				padding-left: 20px;
+			}
+			#content-bd3-top img{
+				position: absolute;
+				top: 6px;
+				left: 10px;
+				float: left;
+			}
+			#content-bd3-top span{
+				position: absolute;
+				font-size: 16px;
+				color: #fff;
+				margin-right: 9px;
+				left:50px;
+				text-align: center;
+				line-height: 35px;
+			}
+			#content-bd3-body ul{
+				width: 366px;height: 20px;
+			}
+			#content-bd3-body ul li{
+				float: left;
+			}
+			#content-bd3-body p{
+				margin-top: 17px;
+				margin-bottom: 9px;
+				color: #62B5EC;
+			}
+			#content-bd3-body ul li a{
+				color: #0aa1ed;
+				text-decoration: none;
+				margin-right: 11px;
+			}
+			#content-bd4 .details1{
+				margin-top: 8px;
+				margin-bottom: 6px;
+				color: #000;
+				font-size: 12px;
+				font-weight: lighter;
+				text-align: center;
+			}
+			#content-bd4 .price1{
+				margin-top: 6px;
+				margin-bottom: 6px;
+				font-size: 12px;
+				font-weight: bold;
+				color: #0AA1ED;
+				text-align: center;
+			}
+			#content-bd4 .view1{
+				width:100px;height:24px;
+				display:block;
+				border-radius: 2px;
+				background-image: linear-gradient(to bottom,#27b1f6,#0aa1ed);
+				color: #fff;
+				font:16px simhei;
+				text-align: center;
+				line-height: 24px;
+				text-decoration: none;
+				margin: 0 auto;
+			}
+			#content-bd4 p a{
+				font:12px "simhei", Arial, Helvetica, sans-serif;
+				text-decoration: none;
+				text-align: center;
+				color: #fff;
+			}
+			#content-bd4 img{
+				transition: all 0.3s;
+				cursor: pointer;
+			}
+			#content-bd4 img:hover{
+				transform: scale(1.2);
+			}
+			
+			/* 底部部分 */
+			#footer{
+				width: 1000px;
+				/* width: 100%; */
+				margin: 70px auto 0;
+				/* margin-top: 80px; */
+				/* padding-top: 62px; */
+				/* background-color: #0056B3; */
+				color: black;
+				font-family: "microsoft yahei";
+			}
+			#ft1,#ft2,#ft3{
+				width: 333px;
+				float: left;
+			}
+			#ft3{
+				padding-left:56px;
+				box-sizing: border-box;
+			}
+			#ft2 ul{
+				float:left;
+				margin-left: 50px;
+				line-height: 26px;
+				text-align: center;
+				list-style: none;
+			}
+			#footer ul li a{
+				color: #808080;
+				font: 12px simhei;
+				text-decoration: none;
+			}
+			#ft2 ul li h3{
+				margin-bottom: 10px;
+			}
+			#footer .service{
+				float: left;
+				text-align: center;
+				margin: 0px 6px 0px 46px;
+				width: 125px;
+			}
+			#footer .service p{
+				margin-bottom: 11px;
+				color: #333;
+				font: 14px simhei;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div id="content-bd1">
+				<div class="desc">
+					<p class="title">灵越 燃7000系列</p>
+					<p class="details">酷睿双核i5处理器|256GB SSD|8GB内存<br>|英特尔HD显卡620含共享显卡内存</p>
+					<p class="price">￥6988.00</p>
+					<a class="view" href="#">查看详情</a>
+				</div>
+				<img src="study_computer_img1.png" alt="">
+			</div>
+			<div id="content-bd2">
+				<div class="desc">
+					<p class="title">颜值 框不住</p>
+					<p class="details">
+						酷睿双核i5处理器|256GB SSD| 8GB内存<br>
+						英特尔HD显卡620含共享显卡内存
+					</p>
+					<p class="price">￥6888.00</p>
+					<a class="view" href="#">查看详情</a>
+				</div>
+				<img src="study_computer_img2.png" alt="">
+			</div>
+			<div id="content-bd3">
+				<div id="content-bd3-top">
+					<img src="computer_icon1.png" alt="">
+					<span>电脑,办公/1F</span>
+				</div>
+				<div id="content-bd3-body">
+					<p>电脑整机</p>
+					<ul>
+						<li><a href="">笔记本</a></li>
+						<li><a href="">游戏机</a></li>
+						<li><a href="">台式机</a></li>
+						<li><a href="">台式机</a></li>
+						<li><a href="">台式机</a></li>
+						<li><a href="">台式机</a></li>
+					</ul>
+					<p>电脑配件</p>
+					<ul>
+						<li><a href="">CPU</a></li>
+						<li><a href="">SSd硬盘</a></li>
+						<li><a href="">显示器</a></li>
+						<li><a href="">SSd硬盘</a></li>
+						<li><a href="">SSd硬盘</a></li>
+						<li><a href="">SSd硬盘</a></li>
+					</ul>
+					<p>外设/游戏</p>
+					<ul>
+						<li><a href="">鼠标</a></li>
+						<li><a href="">智能单车</a></li>
+						<li><a href="">智能单车</a></li>
+						<li><a href="">智能单车</a></li>
+						<li><a href="">游戏设备</a></li>
+						<li><a href="">智能单车</a></li>
+					</ul>
+				</div>
+			</div>
+			<div id="content-bd4">
+				<img src="study_computer_img3.png" alt="">
+				<p class="details1">戴尔(DELL)XPS13-9360-R1609 13.3英寸微边框笔记本电脑</p>
+				<p class="price1">￥4600.00</p>
+				<p class="view1"><a href="#">查看详情</a></p>
+			</div>
+			<div id="content-bd4">
+				<img src="./study_computer_img4.png" alt="">
+				<p class="details1">14.8mm超轻薄笔记本电脑 航海王版 13.3英寸微边框笔记本电脑</p>
+				<p class="price1">￥4600.00</p>
+				<p class="view1"><a href="#">查看详情</a></p>
+			</div>
+			<div id="content-bd4">
+				<img src="study_computer_img5.png" alt="">
+				<p class="details1">联想(Lenovo) YOGA900 多彩版 13.3英寸微边框笔记本电脑</p>
+				<p class="price1">￥4600.00</p>
+				<p class="view1"><a href="#">查看详情</a></p>
+			</div>
+		</div>
+		<div id="footer">
+			<div id="ft1">
+				<img src="logo.png" alt="">
+				<img src="footerFont.png" alt="">
+			</div>
+			<div id="ft2">
+				<ul>
+					<li>
+						<a href="">
+							<h3>买家帮助</h3>
+						</a>
+					</li>
+					<li>
+						<a href="">新手指南</a>
+					</li>
+					<li><a href="">服务保障</a></li>
+					<li><a href="">常见问题</a></li>
+				</ul>
+				<ul>
+					<li>
+						<a href=""><h3>商家帮助</h3></a>
+					</li>
+					<li>
+						<a href="">商家入驻</a>
+					</li>
+					<li>
+						<a href="">商家后台</a>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<a href="#"><h3>关于我们</h3></a>
+					</li>
+					<li>
+						<a href="">关于达内</a>
+					</li>
+					<li>
+						<a href="">联系我们</a>
+					</li>
+					<li>
+						<img src="sinablog.png" alt="">
+						<img src="wechat.png" alt="">
+					</li>
+				</ul>
+			</div>
+			<div id="ft3">
+				<div class="service">
+					<p>学子商城客户端</p>
+					<img src="ios.png" alt="">
+					<img src="android.png" alt="">
+				</div>
+				<img src="erweima.png" alt="" id="">
+			</div>
+		</div>
+	</body>
+</html>

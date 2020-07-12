@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style type="text/css">
+			#content{
+				width: 1000px;height: 400px;
+				margin: 0 auto;
+				position: relative;
+			}
+			#content>img{
+				width: 100%;
+			}
+			.left,.right{
+				position: absolute;
+				width: 35px;height: 70px;
+				background: rgba(0,0,0,.5) url(arrow-left.png) no-repeat 50%;
+				border-radius: 4px;
+				top:165px;
+			}
+			.left{left: 5px;}
+			.right{right: 5px;
+			background-image:url(arrow-right.png);
+			}
+			.left:hover,.right:hover{
+				background-color: rgba(0,0,0,.3);
+			}
+			ul{
+				width: 88px;height: 20px;
+				list-style: none;
+				position: absolute;
+				left: 456px;
+				bottom: 20px;
+			}
+			ul>li{
+				width: 12px;height: 12px;
+				float: left;
+				border-radius: 50%;
+				background-color: #fff;
+				margin: 0 5px;
+			}
+			ul>li:hover{
+				background-color: #0AA1ED;
+				cursor: pointer;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="content">
+			<img src="banner4.png" alt="">
+			<a class="left" href="#"></a>
+			<a class="right" href="#"></a>
+			<ul>
+				<li></li>
+				<li></li>
+				<li></li>
+				<li></li>
+			</ul>
+		</div>
+	</body>
+</html>

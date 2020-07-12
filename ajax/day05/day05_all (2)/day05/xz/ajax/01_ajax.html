@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//小黄人4部曲
+				//1.创建异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接收响应,开启监听---这个function会被调用4次
+				xhr.onreadystatechange=function(){
+					//4遍中，我们只关注第4遍---xhr.readyState请求状态
+					//响应状态码为200----xhr.status
+					if(xhr.readyState==4 && xhr.status==200){
+						//代码运行到这个if里，说明有正确的响应数据可以接收
+						//响应数据默认保存在xhr.responseText
+						var r=xhr.responseText;
+						console.log(r);
+					}
+				}
+				//2.创建请求,打开连接
+				xhr.open("get","/ajax/test",true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<!-- 点击按钮，接收响应数据，打印在控制台 -->
+		<button onclick="show()">显示</button>
+	</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1{
+				width:200px;height: 200px;
+				border: 2px solid #f00;
+				background-color: #aff;
+				padding:20px;
+			}
+			#d2{
+				width:608px;
+				border:2px solid #f00;
+			}
+			#d2>img{
+				width:25%;
+				background-color: #00f;
+				box-sizing: border-box;
+				padding:5px;
+				margin: 5px;
+			}
+			#d3{
+				width:200px;height:200px;
+				border:2px solid #f00;
+				/* 改变盒子模型的计算方式 */
+				/*默认的盒子模型： content-内容，你定义的width和height，是内容区域的宽高，加上另外6个部分组成实际占地大小 */
+				/* box-sizing: content-box; */
+				/* border-box,你定义的width和height,是包含border，border以内的所有东西的大小*/
+				box-sizing: border-box;
+				margin:10px;
+				padding:20px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d3"></div>
+		<br>
+		<hr>
+		<br>
+		<!-- 为什么一行放不下，图片之间的空隙是谁 -->
+		<div id="d2">
+			<img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt=""><img src="1.jpg" alt="">
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="d1">123</div>
+	</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//准备对象数组
+				var users=[
+					{uname:"dingding1",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding2",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding3",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding4",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding5",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding6",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:1},
+					{uname:"dingding7",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:0},
+					{uname:"dingding8",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:-1},
+					{uname:"dingding9",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:1},
+					{uname:"dingding0",email:"12@12.com",phone:"1234567",user_name:"丁春秋",gender:1}
+				];
+				//获取div对象
+				var obj=document.getElementById("d1");
+				//结构字符串---1
+				var htmlStr=`
+					<table border="1" bordercolor="purple">
+						<tr>
+							<th>用户名称</th>
+							<th>用户邮箱</th>
+							<th>联系方式</th>
+							<th>真实姓名</th>
+							<th>用户性别</th>
+							<th>操作</th>
+						</tr>`;
+					//结构字符串---2---循环
+					for(let obj of users){
+						//in obj就是下标
+						//of obj就是数组元素
+						var sex="保密";
+						if(obj.gender==1){
+							sex="男";
+						}else if(obj.gender==0){
+							sex="女";
+						}else{
+							sex="保密";
+						}
+						htmlStr+=`
+							<tr>
+								<td>${obj.uname}</td>
+								<td>${obj.email}</td>
+								<td>${obj.phone}</td>
+								<td>${obj.user_name}</td>
+								<td>${sex}</td>
+								<td>
+									<a href="#">删除</a>
+									<a href="#">修改</a>
+								</td>
+							</tr>
+						`;
+					}
+					//结构字符串---3
+					htmlStr+=`</table>`;
+				obj.innerHTML=htmlStr;
+			}
+		</script>
+	</head>
+	<body onload="show()">
+		<div id="d1"></div>
+	</body>
+</html>

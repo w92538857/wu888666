@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#d1{
+				width: 200px;height: 200px;
+				background-color: #f66;
+				/* 设置参与过渡的css属性 */
+				/* transition-property:all; */
+				/* 设置过渡时长 */
+				/* transition-duration: 4s; */
+				/*设置过渡的时间曲线函数----贝塞尔曲线函数*/
+				/* transition-timing-function: ease-in-out; */
+				/*设置过渡发生之前的延迟时间*/
+				/* transition-delay: 0s; */
+				/* 简写方式 */
+				transition:2s;
+			}
+			#d1:hover{
+				/* background-color: #66f; */
+				/* border-radius: 50%; */
+				transform:translate(1000px);
+				
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d1"></div>
+	</body>
+</html>

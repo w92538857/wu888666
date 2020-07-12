@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function del(){
+				var $uname=uname.value;
+				var $upwd=upwd.value;
+				if(!$uname){alert("用户名不能为空");return;}
+				if(!$upwd){alert("密码不能为空");return;}
+				//1.创建异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接收响应，创建监听
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						d1.innerHTML=r;
+					}
+				}
+				//2.打开连接，创建请求
+				//"/restful_del/:uname&:upwd"
+				xhr.open("delete",`/ajax/restful_del/${$uname}&${$upwd}`,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="del()">删除</button>
+		<div id="d1"></div>
+	</body>
+</html>

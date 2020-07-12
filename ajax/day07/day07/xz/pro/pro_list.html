@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function del($uid){
+				// var $uid=uid.value;
+				//1.创建xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接受响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							alert("删除成功");
+							show();
+						}else{
+							alert("删除失败");
+						}
+					}
+				}
+				//2.创建请求
+				xhr.open("delete","/pro/v1/del/"+$uid,true);
+				//3.发送请求
+				xhr.send();
+			}
+			function show(){//发请求，要数据，生成表格
+				//1.获取xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.创建监听，获取响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						var arr=JSON.parse(r);
+						//结果字符串-1
+						var strHTML=`
+							<table border="1" bordercolor="purple" bgcolor="pink" align="center">
+								<tr>
+									<th>用户姓名</th>
+									<th>用户邮箱</th>
+									<th>联系方式</th>
+									<th>真实姓名</th>
+									<th>用户性别</th>
+									<th>操作</th>
+								</tr>
+						`;
+						//结果字符串-2
+						for(var i=0;i<arr.length;i++){
+							var sex="保密";
+							if(arr[i].gender==1){
+								sex="男";
+							}else if(arr[i].gender==0){
+								sex="女";
+							}else{
+								sex="保密";
+							}
+							var name_true="不详";
+							if(!arr[i].user_name){
+								name_true="不详"
+							}else if(arr[i].user_name==null){
+								name_true="不详"
+							}else{
+								name_true=arr[i].user_name;
+							}
+								strHTML+=`
+									<tr align="center">
+									  <td>${arr[i].uname}</td>
+									  <td>${arr[i].email}</td>
+									  <td>${arr[i].phone}</td>
+									  <td>${name_true}</td>
+									  <td>${sex}</td>
+									  <td>
+											<a href="javascript:del(${arr[i].uid})">删除</a>
+											<a href="01search.html?uid=${arr[i].uid}">修改</a>
+										</td>
+									</tr>
+								`;
+						}
+						//结果字符串-3
+						strHTML+="</table>"
+						d1.innerHTML=strHTML;
+					}
+				}
+				//2.打开连接，创建请求
+				xhr.open("get","/pro/v1/list",true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body onload="show()">
+		<div id="d1"></div>
+	</body>
+</html>

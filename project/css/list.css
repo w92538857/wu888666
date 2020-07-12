@@ -1,0 +1,46 @@
+.my_gray{
+	background:linear-gradient(to bottom, #f0f0f0 0%, #e0e0e0 100%);
+}
+.my_input{
+	width:10%;
+	border:0;
+	outline:0;
+	text-align: center;
+}
+.my_btn{
+	width:1.2rem;height:1.2rem;
+	padding: 0;
+	line-height: 1;
+	color:#fff;
+	font-weight: bold;
+	font-size:1rem;
+	border:0;
+	outline: 0;
+}
+.border-top{
+	border-top:1px dashed #aaa !important;
+}
+
+.page-item .page-link{
+	background-color: transparent;
+	border-color: #ddd;
+	border-radius: 0.25rem;
+	padding-left: 0.75rem;
+	padding-right: 0.75rem;
+}
+.page-item+.page-item{margin-left: 0.6rem;}
+
+.page-item .page-link:hover{
+	border-color: #0aa1ed;
+}
+
+.page-item.disabled .page-link{
+	background-color: transparent;
+	border-color: #ccc;
+}
+
+.my_img{
+	vertical-align: bottom;
+}
+
+

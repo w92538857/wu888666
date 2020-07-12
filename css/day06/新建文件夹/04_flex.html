@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#parent{
+				height: 800px;height: 1000px;
+				border: 2px solid #f00;
+				display:flex;
+				text-align: center;
+				height: 800px;
+				/* 设置主轴方向 */
+				flex-direction: column;
+				/* 设置项目换行 */
+				/* flex-wrap: wrap; */
+				flex-flow: row nowrap;
+				/* 设置项目在主轴方向上的对齐方式 */
+				justify-content: flex-start;
+				/* align-items:auto; */
+			}
+			#d1,#d2,#d3{
+				width: 200px;height: 200px;
+				font: 32px 黑体;
+			}
+			#d1{background-color: #f66;}
+			#d2{background-color: #ff6;}
+			#d3{background-color: #6ff;}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<span id="d1">1</span>
+			<span id="d2">2</span>
+			<span id="d3">3</span>
+		</div>
+	</body>
+</html>

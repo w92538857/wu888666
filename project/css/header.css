@@ -1,0 +1,22 @@
+/* 重写input 的样式 */
+/* .my_input{
+	border-radius: 0;
+	border-color: #0aa1ed;
+} */
+/* @media (min-width:576px){
+	.my_input{height: 100%;}
+}
+@media (min-width:992px){
+	.my_input{height: 75%;}
+} */
+ .form-control{
+	border-radius: 0;
+	border-color: #0aa1ed;
+	outline: 0;
+}
+.form-control:focus{
+	box-shadow: none;
+}
+.breadcrumb-item+.breadcrumb-item::before{
+	content:"|";
+} 

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show_uname(){
+				uname_msg.innerHTML="用户名长度6~10位";
+			}
+			function check_uname(){
+				//1.非空
+				//2.格式
+				var $uname=uname.value;
+				if(!$uname){
+					uname_msg.innerHTML="用户名不能为空";
+				}else if($uname.length<6 || $uname.length>10){
+					uname_msg.innerHTML="格式错误";
+				}else{
+					uname_msg.innerHTML="√";
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<input onblur="check_uname()" onfocus="show_uname()" type="text" id="uname">
+		<span id="uname_msg"></span>
+	</body>
+</html>

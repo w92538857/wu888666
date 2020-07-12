@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			p~span{color: #f00;}
+			ul{
+				width: 900px;height: 40px;
+				background: #999;
+				list-style: none;
+				margin: 0 auto;
+				padding: 0;
+			}
+			ul>li{float: left;margin-top: 10px;
+				margin-right: 5px;
+			}
+			ul>li>a{
+				text-decoration: none;
+			}
+			li~li{margin-left: 10px;}
+		</style>
+	</head>
+	<body>
+		<div id="d1">
+			<p id="d1">老大</p>
+			<span>老二</span>
+			<p>老三</p>
+			<div>老四</div>
+			<span>老五</span>
+		</div>
+		<ul>
+			<li>秒杀</li>
+			<li>优惠卷</li>
+			<li>PLUS</li>
+			<li>闪购</li>
+			<li>拍卖</li>
+		</ul>
+	</body>
+</html>

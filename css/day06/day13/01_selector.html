@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/* [class]{color:#f00;} */
+			/* div[class]{color:#f00;} */
+			/* span[title="gan jue zi ji meng meng da"]{color:#f00;} */
+			/* span[id="three"][title]{color:Red;} */
+			[title~="meng"]{color:Red;}
+			div{display: none;}
+			div:target{
+				display: block;
+				color: red;
+				background-color: #000; 
+				font:32px chiller;
+			}
+		</style> 
+	</head>
+	<body>  
+		<h4>目标伪类</h4>
+		<a href="#hz">海贼王</a>
+		<a href="#fbb">一人之下</a>
+		<a href="#yw">妖精的尾巴</a>
+		<div id="hz">海贼王Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reprehenderit sed vero unde quibusdam aut sunt inventore natus ab esse! Nobis iusto inventore aut sint laudantium reprehenderit qui quibusdam amet repellat.</div>
+		<div id="fbb">一人之下Lorem ipsum dolor sit amet, consectetur adipisicing elit. Id quos itaque suscipit ipsa repellendus ipsam dignissimos impedit fugiat maxime ratione necessitatibus alias quidem nostrum ad fuga. Cupiditate molestias eum nostrum.</div>
+		<div id="yw">妖精的尾巴Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatum rem aspernatur amet nostrum unde! Mollitia accusantium itaque nulla quidem pariatur non iure consequatur eum enim inventore deserunt est eius fuga.</div>
+	<br>
+	<hr>
+	<br>
+		<h4>属性选择器</h4>
+		<p id="d1" >大娃</p>
+		<p class="c">二娃</p>
+		<span id="three" title="gan jue zi ji meng meng da">三娃</span>
+		<b>四娃</b>
+		<p>五娃</p>
+		<div class="c">六娃</div>
+		<h1 title="ganjuezijimengmengda">老幺</h1>
+	</body>
+</html>

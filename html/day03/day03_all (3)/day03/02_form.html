@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){alert(1111111111)}
+		</script>
+	</head>
+	<body>
+		<h4>文本域</h4>
+		<form action="">
+			<select name="city"  multiple>
+				<option >北京</option>
+				<option >上海</option>
+				<option >广州</option>
+				<option >深圳</option>
+				<option selected >佳木斯</option>
+			</select>
+			<br>
+			<!-- <textarea name="word" cols="5" rows="3"></textarea> -->
+			<button>提交</button>
+		</form>
+		<br>
+		<hr>
+		<br>
+		<h4>单选和多选</h4>
+		<form action="" method="post" enctype="multipart/form-data">
+			<input type="file" name="pic" multiple><br>
+			<input type="hidden" name="uid" value="jd00011222">
+			<br>
+			<br>
+			<h4>多选</h4>
+			<input type="checkbox" name="hobby" value="eat">吃
+			<input type="checkbox" name="hobby" value="drink">喝
+			<input type="checkbox" checked name="hobby" value="play">玩
+			<input type="checkbox" checked name="hobby" value="happy">乐
+			<hr>
+			<h4>单选</h4>
+			<input type="radio" checked name="gender" value="man">男
+			<input type="radio" checked name="gender" value="woman">女
+			<input type="radio" checked name="gender" value="liang">亮
+			<hr>
+			<input type="radio" checked name="gender1" value="1">男
+			<input type="radio" name="gender1" value="0">女
+			<input type="radio" name="gender1" value="-1">亮<br>
+			<button>提交</button>
+		</form>
+		<br>
+		<hr>
+		<br>
+		<h4>input控件</h4>
+		<form action="">
+			<input type="text" name="uname" value="123" placeholder="请输入您的账户"><br>
+			<input type="password" name="upwd" value="123"><br>
+			<input type="submit" value="00544"><br>
+			<input onclick="show()" type="button" value="44944"><br>
+			<input type="reset">
+			<button>登录</button>
+		</form>
+		<br>
+		<hr>
+		<br>
+		<form action="" method="post" enctype="multipart/form-data">
+			<input type="text" name="uname"><br>
+			<input type="submit">
+		</form>
+	</body>
+</html>

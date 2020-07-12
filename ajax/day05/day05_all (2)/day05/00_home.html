@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function show(){
+				//数据---对象数组
+				var users=[
+					{uname:"dingding",email:"12@123",phone:"12345678",user_name:"张三丰",gender:1},
+					{uname:"ding1",email:"12@123",phone:"12345678",user_name:"张四丰",gender:0},
+					{uname:"ding2",email:"12@123",phone:"12345678",user_name:"张5丰",gender:0},
+					{uname:"ding3",email:"12@123",phone:"12345678",user_name:"张6丰",gender:0},
+					{uname:"ding4",email:"12@123",phone:"12345678",user_name:"张6丰",gender:0},
+					{uname:"ding5",email:"12@123",phone:"12345678",user_name:"张6丰",gender:0},
+					{uname:"ding6",email:"12@123",phone:"12345678",user_name:"张6丰",gender:0},
+					{uname:"ding7",email:"12@123",phone:"12345678",user_name:"张6丰",gender:0}
+				];
+				//html结构字符串-----1---表头
+				var htmlStr=`
+					<table border="1" bordercolor="purple">
+						<tr>
+							<th>用户名称</th>
+							<th>用户邮箱</th>
+							<th>联系方式</th>
+							<th>真实姓名</th>
+							<th>用户性别</th>
+							<th>操作</th>
+						</tr>
+				`;
+				//html结构字符串-----2---循环
+				for(var i=0;i<users.length;i++){
+					//做用户性别的翻译
+					var sex="保密";
+					if(users[i].gender==1){
+						sex="男";
+					}else if(users[i].gender==0){
+						sex="女";
+					}else{
+						sex="保密";
+					}
+					htmlStr+=`
+						<tr>
+							<td>${users[i].uname}</td>
+							<td>${users[i].email}</td>
+							<td>${users[i].phone}</td>
+							<td>${users[i].user_name}</td>
+							<td>${sex}</td>
+							<td>
+								<a href="#">修改</a>
+								<a href="#">删除</a>
+							</td>
+						</tr>
+					`;
+				}
+				//html结构字符串-----3---结束的table标签
+				htmlStr+="</table>";
+				d1.innerHTML=htmlStr;
+			}
+		</script>
+	</head>
+	<body onload="show()">
+		<div id="d1"></div>
+		<!-- <button onclick="show()">显示</button> -->
+	</body>
+</html>

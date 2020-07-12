@@ -1,0 +1,167 @@
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Document</title>
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+		<link rel="stylesheet" href="css/bootstrap.css">
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js"></script>
+		<script src="js/bootstrap.min.js"></script>
+		<style>
+			/* .container{background-color: #e8e8e8;} */
+			.page-link{
+				border-radius: 0.25rem;
+				background-color: transparent;
+				border-color: #ccc;
+			}
+			.page-item+.page-item{margin-left: 0.6rem;}
+			.page-link:hover{
+				border-color: #0aa1ed;
+			}
+			.breadcrumb-item + .breadcrumb-item::before{
+				content:"|";
+			}
+		</style>
+	</head>
+	<body>
+		<div class="container">
+			<h4>进度条项目中的使用</h4>
+			<div class="progress">
+				<div class="progress-bar w-100 bg-danger">危险</div>
+				<div class="progress-bar w-100 bg-warning">一般</div>
+				<div class="progress-bar w-100 bg-success">安全</div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<h4>进度条</h4>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar w-100 progress-bar-striped"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar-striped progress-bar w-100 bg-danger "></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar-striped progress-bar w-100 bg-warning"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar-striped progress-bar w-100 bg-success"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar-striped progress-bar w-100 bg-info"></div>
+			</div>
+			<div class="progress">
+				<div class="progress-bar-animated progress-bar-striped progress-bar w-100 bg-primary"></div>
+			</div>
+			<br>
+			<hr>
+			<br>
+			<h4>面包屑导航的练习</h4>
+			<ul class="breadcrumb bg-transparent">
+				<li class="breadcrumb-item">
+					<a href="#"><img src="care.png" alt=""></a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#"><img src="care.png" alt=""></a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#"><img src="care.png" alt=""></a>
+				</li>
+				<li class="breadcrumb-item">
+					<a class="text-muted" href="#">注册</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a class="text-muted" href="#">登录</a>
+				</li>
+			</ul>
+			<br>
+			<hr>
+			<br>
+			<h4>面包屑导航</h4>
+			<ul class="breadcrumb">
+				<li class="breadcrumb-item">
+					<a href="#">首页</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#">学习用品</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#">笔记本电脑</a>
+				</li>
+				<li class="breadcrumb-item">
+					<a href="#">华为笔记本</a>
+				</li>
+			</ul>
+			<br>
+			<hr>
+			<br>
+			<h4>分页</h4>
+			<ul class="pagination">
+				<li class="page-item disabled">
+					<a class="page-link" href="#">上一页</a>
+				</li>
+				<li class="page-item active">
+					<a class="page-link" href="#">1</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">2</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">3</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">4</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">5</a>
+				</li>
+				<li class="page-item">
+					<a class="page-link" href="#">下一页</a>
+				</li>
+			</ul>
+			<br>
+			<hr>
+			<br>
+			<h4>巨幕</h4>
+			<div class="jumbotron">
+				话密大咖----薛佳，请闭嘴！
+			</div>
+			<br>
+			<hr>
+			<br>
+			<h4>徽章</h4>
+			<ul class="list-group">
+				<li class="list-group-item">
+					赞 <a class="badge badge-success badge-pill" href="#">765</a>
+				</li>
+				<li class="list-group-item">
+					踩 <a class="badge badge-danger" href="#">544</a>
+				</li>
+				<li class="list-group-item">
+					关注 <a class="badge badge-warning" href="#">666</a>
+				</li>
+			</ul>
+			<br>
+			<hr>
+			<br>
+			<h4>模态框--脱离父窗口，悬浮在页面的一个子窗口</h4>
+			<button data-target="#d1" data-toggle="modal" class="btn btn-info">打开模态框</button>
+			<div id="d1" class="modal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5>请输入您的姓名,测试另一半姓名</h5>
+						</div>
+						<div class="modal-body">
+							<input type="text" class="form-control">
+						</div>
+						<div class="modal-footer">
+							<!-- 点击之后让目标元素消失 -->
+							<a data-dismiss="modal" href="#" class="btn btn-danger">关闭</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>

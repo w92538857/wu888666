@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			p:first-child{color:red;}
+			p:last-child{color:blue;}
+			p:nth-child(6){background: #ff0;}
+			table{
+				width: 200px;height: 200px;
+				border: 2px solid #000;
+			}
+			table td{border: 2px solid #000;}
+			/* tr:first-child{background-color: #0ff;}
+			tr:last-child{background-color: #ff0;}
+			tr:nth-child(3) td:nth-child(2){background-color: red;} */
+			div:empty{width:100px;height:100px;background: #ff0;}
+			/* a:only-child{color:#f00;} */
+			a:not(:only-child){color:red;}
+			ul{
+				width: 200px;
+				list-style: none;
+			}
+			ul li{ 
+				border:2px solid #f00;
+				border-radius: 4px;
+			}
+			li:not(:last-child){
+				border-bottom-left-radius: 0;
+				border-bottom-right-radius: 0;
+			}
+			li:not(:first-child){
+				border-top-left-radius: 0;
+				border-top-right-radius: 0;
+			}
+		/* 	li:first-child{
+				border-top-left-radius: 4px;
+				border-top-right-radius: 4px;
+			}
+			li:last-child{
+				border-bottom-left-radius: 4px;
+				border-bottom-right-radius: 4px;
+			} */
+			/*刚才表格，除了第三行第二列，其它背景，都变成蓝色*/
+			tr:not(:nth-child(3)),td:not(:nth-child(2)){
+				background-color: #0000FF;
+			}
+			tr:not(:nth-child(3)){
+				background-color: #00f;
+			}
+			tr:nth-child(3) td:not(:nth-child(2)){
+				background-color: #00f;
+			}
+			
+			#d2:first-letter{
+				color:#f00;font-size: 50px;
+			}
+			#d2::first-line{
+				color:#00f;
+			}
+			#d2::selection{
+				color:yellow;
+				background-color: #afa;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="d2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique neque dolorem ut quisquam distinctio recusandae a error aspernatur exercitationem quos suscipit nulla expedita nihil obcaecati nostrum repudiandae odit voluptatum ipsum cupiditate illum assumenda eligendi deleniti quasi earum ipsam. Ad quis laudantium cum necessitatibus nesciunt expedita facilis ex repellat commodi optio rerum laborum officiis ab dolorem accusantium facere doloremque odio nulla alias ea vel minus tempora ipsam eligendi reprehenderit amet sit quod labore eius natus temporibus suscipit atque omnis magni modi delectus maiores aliquam neque architecto iure similique ratione blanditiis ipsa sunt est adipisci! Debitis facilis aliquam modi dolores labore recusandae. Quaerat non tenetur dolorem voluptatem sit eaque deserunt alias et ea nobis blanditiis tempore harum earum aliquam veritatis numquam iste ex molestiae nesciunt vero hic quibusdam dicta optio voluptas quod. Libero corporis sed quaerat adipisci sint necessitatibus quisquam culpa explicabo nemo at rerum eveniet. Nemo rem vitae commodi sequi ab eum ullam! Doloribus obcaecati minus ratione corporis vero incidunt cum hic! Iste consequatur consequuntur aperiam quasi dolores sed assumenda fuga possimus ea hic. Optio iure ipsam autem rem pariatur tempore quibusdam veritatis non ab velit quo itaque quasi sapiente reprehenderit tenetur eius odit ipsa accusantium architecto vero provident earum hic?</div>
+		<br>
+		<hr>
+		<br>
+		<ul>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+			<li>123</li>
+		</ul>
+		
+		<br>
+		<hr>
+		<br>
+		<div>
+			<a href="#">123</a>
+			<a href="#">123</a>
+			<a href="#">123</a>
+			<a href="#">123</a>
+			<a href="#">123</a>
+		</div>
+		<div>
+			<a href="#">123</a>
+		</div>
+		<div></div>
+		<br>
+		<hr>
+		<br>
+		<table>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</table>
+		<br>
+		<hr>
+		<br>
+		<div>
+			<p>1</p>
+			<p>2</p>
+			<p>3</p>
+			<p>4</p>
+			<p>5</p>
+			<p>6</p>
+			<p>7</p>
+		</div>
+	</body>
+</html>

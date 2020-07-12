@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			/*110 101 100*/
+			#d1 .c2,#d2>span,#d3{color:pink;}
+			#d1 #d2 .c3{color:yellow}/*200+10*/
+			.c1 #d2 #d3{color:blueviolet}/*10+100+100*/
+			#d1.c2 span{color:red;}/*100+10+1=111*/
+			#d1 p>#d3{color: orange;}/*100+1+100=201*/
+			div>div>div>div>div>div>div>div>div>div>div{color: red;}
+			.c4{color: green;}
+		</style>
+	</head>
+	<body>
+		<div>
+			<div>
+				<div>
+					<div>
+						<div>
+							<div>
+								<div>
+									<div>
+										<div>
+											<div>
+												<div>
+													<div class="c4">Lorem ipsum dolor sit amet</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<br>
+		<hr>
+		<br>
+		<div id="d1" class="c1">
+			<p id="d2" class="c2">
+				<span id="d3" class="c3">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam animi molestiae minima quasi dignissimos quod error odit iusto alias? Dolore suscipit asperiores laborum. Voluptas adipisci quae explicabo corrupti inventore facilis!</span>
+			</p>
+		</div>
+		
+	</body>
+</html>

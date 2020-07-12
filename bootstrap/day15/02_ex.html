@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			#parent{width: 80%;
+				margin: 0 auto;
+				border: 2px solid #f00;
+				display: flex;
+				flex-wrap: wrap;
+			}
+			#parent>div{
+				height: 100px;
+				box-sizing: border-box;
+			}
+			#parent>div:first-child{background-color: #ff6;}
+			#parent>div:nth-child(2){background-color: #f6f;}
+			#parent>div:nth-child(3){background-color: #6ff	;}			#parent>div:nth-child(4){background-color: #f66;}
+			@media (min-width:576px) {/*sm/md/lg/xl*/
+				#parent>div{flex:0 0 100%;}
+			}
+			@media (min-width:768px) {/*md/lg/xl*/
+				#parent>div{flex:0 0 50%;}
+			}
+			@media (min-width:992px) {/*lg/xl*/
+				#parent>div{flex:0 0 33.33%;}
+			}
+			@media (min-width:1200px) {/*xl*/
+				#parent>div{flex:0 0 25%;}
+			}
+		</style>
+	</head>
+	<body>
+		<div id="parent">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+	</body>
+</html>

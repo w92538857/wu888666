@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			function show(){
+				//1.创建异步对象
+				var xhr=new XMLHttpRequest();
+				//4.接收响应，打开监听
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						var arr=JSON.parse(r);
+						//结构字符串--1
+						var strHtml=`
+						<table border="1">
+						<tr>
+							<th>你哈啊</th>
+							<th>你哈啊</th>
+							<th>你哈啊</th>
+							<th>你哈啊</th>
+							<th>你哈啊</th>
+							<th>你哈啊</th>
+						</tr>
+						`;
+						//结构字符串--2
+						for(var i=0;i<arr.length;i++){
+							var sex="保密";
+							if(arr[i].gender==1){
+								sex="男";
+							}else if(arr[i].gender==0){
+								sex="女";
+							}else{
+								sex="保密";
+							}
+						strHtml+=`
+							<tr>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].uname}</td>
+								<td>${arr[i].uname}</td>
+							</tr>
+						`;
+						}
+						strHtml+=`</table>`;
+						d1.innerHTML=strHtml;
+					}
+				}
+				//2.创建请求，打开连接
+				xhr.open("get","/ajax/getList",true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<div id="d1"></div>
+		<button onclick="show()">显示</button>
+	</body>
+</html>

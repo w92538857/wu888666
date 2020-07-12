@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script>
+			function login(){
+				// 获取用户输入的内容
+				var $uname=uname.value;
+				var $upwd=upwd.value;
+				if(!$uname){alert("用户名不能为空");return;}
+				if(!$upwd){alert("密码不能为空");return;}
+				//1.创建xhr异步对象
+				var xhr=new XMLHttpRequest();
+				//4.创建监听，接收响应
+				xhr.onreadystatechange=function(){
+					if(xhr.readyState==4 && xhr.status==200){
+						var r=xhr.responseText;
+						if(r==1){
+							d1.innerHTML="登录成功";
+						}else{
+							d1.innerHTML="登录失败";
+						}
+					}
+				}
+				//2.创建请求，打开连接
+				xhr.open("get","/ajax/login_http?uname="+$uname+"&upwd="+$upwd,true);
+				//3.发送请求
+				xhr.send();
+			}
+		</script>
+	</head>
+	<body>
+		<!-- http原生get方法登录模块 -->
+		<input type="text" id="uname"><br>
+		<input type="text" id="upwd"><br>
+		<button onclick="login()">登录</button>
+		<div id="d1"></div>
+	</body>
+</html>

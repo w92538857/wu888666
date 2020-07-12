@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<style>
+			*{margin: 0;padding: 0;}
+			#main{
+				width: 1000px;
+				margin: 0 auto;
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-between;
+				position: relative;
+			}
+			#main>div{background-color: #e8e8e8;}
+			#main>div:first-child{
+				position: relative;
+				width: 609px;height: 377px;
+				margin-bottom: 10px;
+			}
+			#main>div:nth-child(2){
+				position: relative;
+				width: 381px;height: 377px;
+				margin-bottom: 10px;
+			}
+			#main>div:nth-child(3){
+				position: relative;
+				width: 377px;height: 233px;
+			}
+			#main>div:nth-child(4),#main>div:nth-child(5),#main>div:nth-child(6){
+				position: relative;
+				width: 198px;height: 233px;
+			}
+			#main>div:first-child .desc{
+				position: absolute;
+				width: 245px;
+				height: 243px;
+				top: 55px;
+				left: 65px;
+			}
+			.title{
+				font-size: 32px;
+				color: #333;
+			}
+			.details{
+				font-size: 12px;
+				margin-bottom: 24px;
+			}
+			.price{
+				font-size: 24px;
+				color: #0AA1ED;
+				margin-bottom: 12px;
+			}
+			.view{
+				width: 130px;height: 40px;
+				display: block;
+				border-radius: 3px;
+				background-color: #008BFD;
+				color: #fff;
+				text-decoration: none;
+				line-height: 40px;
+				text-align: center;
+				transition: all 0.5s;
+			}
+			.view:hover{
+				background-color: #0176D0;
+			}
+			#main>div:first-child>img{
+				position: absolute;
+				top: 56px;
+				right: 30px;
+				cursor: pointer;
+				transition: 1s;
+				/* width: 390px;
+				height: 300px; */
+			}
+			#main>div:first-child>img:hover{
+				transform: scale(1.2);
+			}
+			#main>div:nth-child(2) .desc{
+				position: absolute;
+				width: 253px;
+				height: 221px;
+				top: 58px;
+				left: 24px;
+			}
+			#main>div:nth-child(2)>img{
+				position: absolute;
+				width: 292px;
+				height: 232px;
+				bottom: 20px;
+				right: 25px;
+				cursor: pointer;
+				transition: 1s;
+			}
+			#main>div:nth-child(2)>img:hover{
+				transform: scale(1.2);
+			}
+			#main>div:nth-child(3) .desc{
+				position: absolute;
+				width: 149px;
+				height: 119px;
+				top: 41px;
+				left: 33px;
+			}
+			#main>div:nth-child(3) .desc .title{
+				font-size: 22px;
+				color: #333;
+			}
+			#main>div:nth-child(3)>img{
+				position: absolute;
+				top: 40px;
+				right: 17px;
+				transition: all 1s;
+				cursor: pointer;
+			}
+			#main>div:nth-child(3)>img:hover{
+				transform: scale(1.2);
+			}
+			#main>div:nth-child(4)>img{
+				cursor: pointer;
+				transition: all 1s;
+			}
+			#main>div:nth-child(4)>img:hover{
+				transform: scale(1.2);
+			}
+			.details1{
+				font-size: 12px;
+				text-align: center;
+			}
+			.price1{
+				margin-top: 5px;
+				color: #0AA1ED;
+				font-size: 24px;
+				text-align: center;
+			}
+			.view1{
+				width: 110px;height: 28px;
+				margin: 5px auto 0;
+				display: block;
+				font-size: 14px;
+				border-radius: 3px;
+				background-color: #007BFF;
+				color: #fff;
+				text-align: center;
+				line-height: 28px;
+				text-decoration: none;
+			}
+			.view1:hover{
+				background-color: #005CBF;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="main">
+			<div>
+				<img src="img/study_computer_img1.png" alt="">
+				<div class="desc">
+					<p class="title">Apple MacBook Air系列</p>
+					<p class="details">酷睿双核i5处理器|256GB SSD|8GB内存|英特尔HD显卡620含共享显示内存</p>
+					<p class="price">￥6988.00</p>
+					<a class="view" href="#">查看详情</a>
+				</div>
+			</div>
+			<div>
+				<img src="img/study_computer_img2.png" alt="">
+				<div class="desc">
+					<p class="title">小米Air 金属超轻薄</p>
+					<p class="details">酷睿双核i5处理器|512GB SSD|2GB内存|英特尔HD独立显卡</p>
+					<p class="price">￥3488.00</p>
+					<a class="view" href="#">查看详情</a>
+				</div>
+			</div>
+			<div>
+				<img src="img/study_computer_img3.png" alt="">
+				<div class="desc">
+					<p class="title">联想E480C 轻薄系列</p>
+					<p class="price">￥5399.00</p>
+					<a class="view" href="#">查看详情</a>
+				</div>
+			</div>
+			<div>
+				<img src="img/study_computer_img3.png" alt="">
+				<p class="details1">华硕RX310 金属超极本</p>
+				<p class="price1">￥4966.00</p>
+				<a class="view1" href="#">查看详情</a>
+			</div>
+			<div>
+				<img src="img/study_computer_img4.png" alt="">
+				<p class="details1">华硕RX310 金属超极本</p>
+				<p class="price1">￥4966.00</p>
+				<a class="view1" href="#">查看详情</a>
+			</div>
+			<div>
+				<img src="img/study_computer_img5.png" alt="">
+				<p class="details1">华硕RX310 金属超极本</p>
+				<p class="price1">￥4966.00</p>
+				<a class="view1" href="#">查看详情</a>
+			</div>
+		</div>
+	</body>
+</html>

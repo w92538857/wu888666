@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<script type="text/javascript">
+			//用户名的验证
+			function show_uname(){
+				uname_msg.innerHTML="用户名为8~12位";
+			}
+			function check_uname(){
+				var $uname=uname.value;
+				if(!$uname){
+					uname_msg.innerHTML="用户名不能为空"
+				}else if($uname.length<6 || $uname.length>12){
+					uname_msg.innerHTML="x";
+				}else{
+					uname_msg.innerHTML="√";
+				}	
+			}
+			//密码框的验证
+			function show_upwd(){
+				upwd_msg.innerHTML="密码为6~15位";
+			}
+			function check_upwd(){
+				var $upwd=upwd.value;
+				if(!$upwd){
+					upwd_msg.innerHTML="密码不能为空"
+				}else if($upwd.length<6 || $upwd.length>15){
+					upwd_msg.innerHTML="x";
+				}else{
+					upwd_msg.innerHTML="√";
+				}	
+			}
+			//重复密码的验证
+			function show_cpwd(){
+				cpwd_msg.innerHTML="请再输入一遍密码";
+			}
+			function check_cpwd(){
+				var $upwd=upwd.value;
+				var $cpwd=cpwd.value;
+				if(!$cpwd){
+					cpwd_msg.innerHTML="密码不能为空"
+				}else if($upwd===$cpwd){
+					cpwd_msg.innerHTML="√";
+				}else{
+					cpwd_msg.innerHTML="x";
+				}	
+			}
+			function login(){
+				var a1=uname_msg.innerHTML;
+				var a2=upwd_msg.innerHTML;
+				var a3=cpwd_msg.innerHTML;
+				if(a1==="√" && a2==="√" && a3=="√"){
+					alert("登录成功");
+					console.log("登录成功");
+				}else{
+					alert("登录失败");
+					console.log("登录失败");
+				}
+			};
+		</script>
+	</head>
+	<body>
+		输用户名<input onblur="check_uname()" onfocus="show_uname()" type="text" id="uname" />
+		<span id="uname_msg"></span><br>
+		密码提交<input onblur="check_upwd()" onfocus="show_upwd()" type="text" id="upwd" />
+		<span id="upwd_msg"></span><br>
+		密码重复<input onblur="check_cpwd()" onfocus="show_cpwd()" type="text" id="cpwd" />
+		<span id="cpwd_msg"></span><br>
+		<button onclick="login()">登录</button>
+	</body>
+</html>
